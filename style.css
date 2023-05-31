@@ -59,3 +59,26 @@ li:hover {
   background: #292929;
   color: #fcfcfb;
 }
+/* Appliquer les styles lorsque la classe "active" est présente sur la barre latérale (sidebar) */
+#side-bar.active {
+  /* Définir la propriété "left" à 0 pour afficher la barre latérale à gauche */
+  left: 0;
+}
+
+.active span {
+  position: absolute;
+}
+
+/* Appliquer la rotation de 45 degrés au premier élément <span> à l'intérieur de la barre latérale lorsqu'elle est active */
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+/* Rendre le deuxième élément <span> à l'intérieur de la barre latérale invisible lorsque celle-ci est active */
+.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
